@@ -1,0 +1,20 @@
+{
+  "project_name": "post-hypermodern-project",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "module_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+  "project_short_description": "A short description of the project.",
+  "author_name": "Ali Ghahraei Figueroa",
+  "author_email": "aligf94@gmail.com",
+  "github_username": "AliGhahraei",
+  "python_version": "3.13",
+  "license": ["GPL-3.0-only", "MIT", "Apache-2.0", "None"],
+  "create_example_cli": "y",
+  "typer_version": "^0.16.0",
+  "pytest_version": "^8.3.5",
+  "ruff_version": "^0.11.11",
+  "coverage_version": "^7.8.2",
+  "basedpyright_version": "^1.29.2",
+  "actions_checkout_version": "v4",
+  "jdx_mise_action_version": "v2",
+  "mise_tool_version": "2025.5.8"
+}
