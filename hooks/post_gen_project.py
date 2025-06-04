@@ -31,6 +31,7 @@ def setup_project():
     emphasize("Setting up project with mise (installing dependencies and git hooks)...")
     warning("NOTE: this will also trust the mise config for your project: https://mise.jdx.dev/cli/trust.html")
     run("mise trust .", shell=True, check=True)
+    run("mise install", shell=True, check=True)  # Just to populate mise.lock
     run("mise run setup", shell=True, check=True)
     print("Project setup complete.")
 
