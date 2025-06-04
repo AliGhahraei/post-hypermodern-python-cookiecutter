@@ -1,7 +1,8 @@
-{% if cookiecutter.create_example_cli == 'y' %}
+{% if cookiecutter.create_example_cli == 'y' -%}
 import typer
 
 app = typer.Typer()
+
 
 @app.command()
 def hello(name: str):
@@ -10,6 +11,7 @@ def hello(name: str):
     """
     print(f"Hello {name}")
 
+
 if __name__ == "__main__":
     app()
-{% endif %}
+{%- endif %}
