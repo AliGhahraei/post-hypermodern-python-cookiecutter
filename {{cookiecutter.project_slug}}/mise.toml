@@ -1,3 +1,4 @@
+{% raw %}
 [vars]
 run_prefix = 'poetry run'
 
@@ -47,4 +48,5 @@ run = 'mise check' # Adding to depends could make it run before setup finishes
 [tools]
 act = "latest"
 poetry = "latest"
+{% endraw %}
 python = "{{ cookiecutter.python_version }}"
