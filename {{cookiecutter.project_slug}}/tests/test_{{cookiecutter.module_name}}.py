@@ -1,5 +1,3 @@
-import pytest
-
 {% if cookiecutter.create_example_cli == 'y' %}
 from {{ cookiecutter.module_name }}.main import app
 from typer.testing import CliRunner
