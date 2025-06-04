@@ -35,7 +35,3 @@ To set up a development environment:
    ``` bash
    mise local_ci
    ```
-
-## License
-
-This project is licensed under the {{ cookiecutter.license }} License.

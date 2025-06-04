@@ -5,7 +5,7 @@ description = "{{ cookiecutter.project_short_description }}"
 authors = [
   {name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}"}
 ]
-license = "{{ cookiecutter.license }}"
+license = "GPL-3.0-or-later"
 readme = "README.md"
 requires-python = ">= {{ cookiecutter.python_version }}.0, < {{ cookiecutter.python_version | int + 1 }}.0"
 dependencies = [
