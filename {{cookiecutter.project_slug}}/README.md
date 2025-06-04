@@ -8,11 +8,13 @@
 pip install {{ cookiecutter.project_slug }}
 ```
 
+{% if cookiecutter.create_example_cli == 'y' -%}
 ## Usage
 
 ```bash
 {{ cookiecutter.project_slug.replace('-', '_') }} --help
 ```
+{% endif -%}
 
 ## Development
 
