@@ -1,0 +1,52 @@
+[project]
+name = "{{ cookiecutter.project_slug }}"
+version = "0.1.0"
+description = "{{ cookiecutter.project_short_description }}"
+authors = [
+  {name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}"}
+]
+license = "{{ cookiecutter.license }}"
+readme = "README.md"
+requires-python = ">= {{ cookiecutter.python_version }}.0, < {{ cookiecutter.python_version | int + 1 }}.0"
+dependencies = [
+]
+
+{% if cookiecutter.create_example_cli == 'y' %}
+[project.scripts]
+{{ cookiecutter.project_slug.replace('-', '_') }} = '{{ cookiecutter.module_name }}.main:app'
+{% endif %}
+
+[tool.poetry]
+packages = [{include = "{{ cookiecutter.module_name }}"}]
+
+[tool.poetry.group.dev.dependencies]
+{% if cookiecutter.create_example_cli == 'y' %}
+typer = "{{ cookiecutter.typer_version }}"
+{% endif %}
+pytest = "{{ cookiecutter.pytest_version }}"
+ruff = "{{ cookiecutter.ruff_version }}"
+coverage = "{{ cookiecutter.coverage_version }}"
+basedpyright = "{{ cookiecutter.basedpyright_version }}"
+
+
+[tool.coverage.run]
+branch = true
+source = ['{{ cookiecutter.module_name }}', 'tests']
+{% if cookiecutter.create_example_cli == 'y' %}
+omit = ['{{ cookiecutter.module_name }}/main.py']
+{% endif %}
+
+[tool.coverage.report]
+exclude_lines = [
+  'pragma: no cover',
+  'pass',
+  '...',
+  'if TYPE_CHECKING.*',
+]
+fail_under = 100
+show_missing = true
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
