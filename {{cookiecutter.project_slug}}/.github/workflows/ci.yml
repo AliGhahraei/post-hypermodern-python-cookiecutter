@@ -12,10 +12,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@{{ cookiecutter.actions_checkout_version }}
+    - uses: actions/checkout@{{ cookiecutter.__actions_checkout_version }}
     - name: Install mise
-      uses: jdx/mise-action@{{ cookiecutter.jdx_mise_action_version }}
+      uses: jdx/mise-action@{{ cookiecutter.__jdx_mise_action_version }}
       with:
-        version: {{ cookiecutter.mise_tool_version }}
+        version: {{ cookiecutter.__mise_tool_version }}
     - name: Run CI checks
       run: mise run ci

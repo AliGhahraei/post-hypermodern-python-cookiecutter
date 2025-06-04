@@ -21,12 +21,12 @@ packages = [{include = "{{ cookiecutter.module_name }}"}]
 
 [tool.poetry.group.dev.dependencies]
 {% if cookiecutter.create_example_cli == 'y' %}
-typer = "{{ cookiecutter.typer_version }}"
+typer = "{{ cookiecutter.__typer_version }}"
 {% endif %}
-pytest = "{{ cookiecutter.pytest_version }}"
-ruff = "{{ cookiecutter.ruff_version }}"
-coverage = "{{ cookiecutter.coverage_version }}"
-basedpyright = "{{ cookiecutter.basedpyright_version }}"
+pytest = "{{ cookiecutter.__pytest_version }}"
+ruff = "{{ cookiecutter.__ruff_version }}"
+coverage = "{{ cookiecutter.__coverage_version }}"
+basedpyright = "{{ cookiecutter.__basedpyright_version }}"
 
 
 [tool.coverage.run]
