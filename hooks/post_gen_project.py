@@ -17,6 +17,8 @@ def initialize_git():
 def setup_project():
     """Sets up project dependencies and git hooks using mise."""
     print("Setting up project with mise (installing dependencies and git hooks)...")
+    print("Note: this will also trust the mise config for your project: https://mise.jdx.dev/cli/trust.html")
+    os.system("mise trust .")
     os.system("mise run setup")
     print("Project setup complete.")
 
